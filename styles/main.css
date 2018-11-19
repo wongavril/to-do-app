@@ -2,7 +2,6 @@ header {
   height: auto;
   justify-content: center;
   text-align: center;
-  margin: 10px, 10px, 10px, 10px;
 }
 
 body.mdl-layout {
@@ -18,5 +17,3 @@ body.mdl-layout {
   padding-top: 30px;
   font-weight: 400;
 }
-
-li
