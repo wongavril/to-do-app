@@ -1,19 +1,54 @@
-header {
+ul {
+  padding-inline-start: 0px;
+}
+
+.app {
+  width: 50%;
   height: auto;
-  justify-content: center;
-  text-align: center;
+  border: 1px solid gray;
 }
 
-body.mdl-layout {
-  margin: auto;
+.input_field {
+  display: inline;
 }
 
-.listView {
-  min-height: 500px;
+.toDoItem {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
 }
 
-.mdl-card__title-text {
-  padding-top: 30px;
-  font-weight: 400;
+.toDoItem:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.checkbox {
+  width: 30px;
+}
+
+.deleteButton {
+  width: 90px;
+}
+
+.toDoItem_text {
+  width: 300px;
+}
+
+.inputForm {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px 5px 5px;
+  margin-top: 15px;
+}
+
+.app > .mdl-card__title {
+  background-color: #607D8B;
+  color: #fff;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
