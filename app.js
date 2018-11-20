@@ -33,6 +33,7 @@ function onReady() {
       const newLi = document.createElement('li');
       const checkbox = document.createElement('input');
       checkbox.type = "checkbox";
+      checkbox.className = "checkbox";
       checkbox.addEventListener('click', event => {
         toDos[toDo.id].complete = !toDos[toDo.id].complete;
         saveToLocalStorage();
@@ -40,6 +41,7 @@ function onReady() {
 
       const deleteButton = document.createElement('button');
       deleteButton.textContent = "Delete!";
+      deleteButton.className = "delete_button mdl-button mdl-js-button mdl-button--raised mdl-button--accent";
 
       deleteButton.addEventListener('click', event => {
         toDos = deleteToDo(toDo.id);
@@ -47,10 +49,15 @@ function onReady() {
         renderTheUI();
       });
 
-      newLi.textContent = toDo.title;
+      const toDoText = document.createElement('div');
+      toDoText.textContent = toDo.title;
+      toDoText.className = 'toDoItem-text mdl-list__item-primary-content';
+
+      newLi.className = "toDoItem mdl-list__item";
 
       toDoList.appendChild(newLi);
       newLi.appendChild(checkbox);
+      newLi.appendChild(toDoText);
       newLi.appendChild(deleteButton);
     });
 
